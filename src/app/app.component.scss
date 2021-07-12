@@ -1,0 +1,47 @@
+$jivox-default: #53016b;
+$white: #ffffff;
+$light-grey: lightslategrey;
+$jivox-hover: #805ba5;
+
+.app-jivox {
+  &__head {
+    color: $jivox-default;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+
+    &--labels {
+      &-id {
+        color: $light-grey;
+        font-size: small;
+      }
+      &-name {
+        color:$jivox-default;
+        font-style: italic;
+        padding-left: 0.5rem;
+      }
+    }
+
+    &--actions {
+      button {
+        margin-right: 0.5rem;
+        background-color: $jivox-default;
+        color: $white;
+        font-size: 12px;
+        line-height: 20px;
+        border: none;
+      }
+      button:hover {
+        background-color: $jivox-hover;
+      }
+      button:disabled {
+        background-color: $light-grey;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

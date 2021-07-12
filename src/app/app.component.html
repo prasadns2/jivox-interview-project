@@ -1,0 +1,16 @@
+<section class="app-jivox">
+  <h1 class="app-jivox__head">JIVOX Rules Project</h1>
+
+  <div *ngFor="let rule of rulesList; let i = index" class="app-jivox__container">
+    <div class="app-jivox__container--labels">
+      <span class="app-jivox__container--labels-id">{{ i+1 }}) {{ rule.id }}</span>
+      <span class="app-jivox__container--labels-name">{{ rule.ruleName }}</span>
+    </div>
+    <div class="app-jivox__container--actions">
+      <button (click)="deleteRule(i)">Delete</button>
+      <button (click)="cloneRule(i)">Clone</button>
+      <button (click)="moveUpRule(i)" [disabled]="i === 0">Move Up</button>
+      <button (click)="moveDownRule(i)" [disabled]="i === rulesList.length-1">Move Down</button>
+    </div>
+  </div>
+</section>
